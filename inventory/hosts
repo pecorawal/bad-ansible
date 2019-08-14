@@ -1,15 +1,15 @@
 [internal:vars]
-GUID="{{ lookup('env', 'a196') }}"
+GUID="{{ lookup('env', '3afe') }}"
 
 [frontends] # These are the frontend servers
-frontend1 ansible_host=frontend1."{{ a196 }}".internal
+frontend1 ansible_host=frontend1.'{{ GUID }}'.internal
 
 [apps] ## These are the apps servers
-app1 ansible_host=app1."{{ a196 }}".internal
-app2 ansible_host=app2."{{ a196 }}".internal
+app1 ansible_host=app1.'{{ GUID }}'.internal
+app2 ansible_host=app2.'{{ a196 }}'.internal
 
 [appdbs] # These are the appdb servers
-appdb1 ansible_host=appdb1."{{ a196 }}".internal
+appdb1 ansible_host=appdb1.'{{ a196 }}'.internal
 
 [internal:children]
 frontends
