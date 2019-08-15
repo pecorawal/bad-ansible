@@ -5,11 +5,11 @@ GUID="{{ lookup('env', '3afe') }}"
 frontend1 ansible_host=frontend1.3afe.example.opentlc.com
 
 [apps] ## These are the apps servers
-app1 ansible_ssh_host=app1.3afe.example.opentlc.com
-app2 ansible_ssh_host=app2.3afe.example.opentlc.com
+app1 ansible_host=app1.3afe.example.opentlc.com
+app2 ansible_host=app2.3afe.example.opentlc.com
 
 [appdbs] # These are the appdb servers
-appdb1 ansible_ssh_host=appdb1.3afe.example.opentlc.com
+appdb1 ansible_host=appdb1.3afe.example.opentlc.com
 
 [internal:children]
 frontends
